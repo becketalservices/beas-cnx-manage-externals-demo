@@ -1,0 +1,21 @@
+<div data-dojo-id="${id}" data-dojo-type="dijit/Dialog" class="lotusTabDialog lcSharebox" title="${nls.deleteTitle.label}">
+	<div class="lotusDialogBorder" style="width: 440px;">
+		<div class="dijitDialogTitleBar lotusDialogHeader" dojoattachpoint="titleBar" title="${nls.deleteTitle.label}" style="padding-bottom: 15px !important;">
+			<span id="${id}_title" class="dijitDialogTitle" dojoattachpoint="titleNode">${nls.deleteTitle.label}</span>
+			<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: cancelDialog" title="${nls.close.label}" role="button" tabIndex="-1">
+				<span data-dojo-attach-point="closeText" class="closeText" title="${nls.close.label}">x</span>
+        		</span>	
+		</div>
+		<form class="lotusDialog lotusForm2" action="javascript:;" method="post" aria-live="assertive" id="${id}_form">
+        		<div class="lotusDialogContent">
+        			<div style="display:none" id="${id}_messageContainer"></div>
+				<div style="padding-bottom:10px;" id="${id}_caption"></div>
+				<div style="display:none" id="${id}_docunid"></div>
+        		</div><!--end lotusDialogContent-->
+        		<div class="lotusDialogFooter">
+                		<input value="${nls.deleteBtn.label}" class="lotusBtn" type="submit" data-dojo-attach-event="onclick: deleteUser" id="${id}_deleteBtn"/>
+				<input name="CloseButtonName" value="${nls.cancel.label}" class="lotusBtn" type="button" data-dojo-attach-event="onclick: cancelDialog" id="${id}_closeBtn"/>
+        		</div>
+        	</form>
+	</div>
+</div>

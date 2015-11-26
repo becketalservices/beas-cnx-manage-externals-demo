@@ -1,0 +1,18 @@
+<div data-dojo-id="${id}" data-dojo-type="dijit/Dialog" class="lotusTabDialog lcSharebox" title="${nls.helpTitle.label}">
+	<div class="lotusDialogBorder" style="width: ${nls.helpTitle.width};">
+		<div class="dijitDialogTitleBar lotusDialogHeader" dojoattachpoint="titleBar" title="${nls.helpTitle.label}" style="padding-bottom: 15px !important;">
+			<span id="${id}_title" class="dijitDialogTitle" dojoattachpoint="titleNode">${nls.helpTitle.label}</span>
+			<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: cancelDialog" title="${nls.close.label}" role="button" tabIndex="-1">
+				<span data-dojo-attach-point="closeText" class="closeText" title="${nls.close.label}">x</span>
+        		</span>	
+		</div>
+		<form class="lotusDialog lotusForm2" action="javascript:;" method="post" aria-live="assertive" id="${id}_form">
+        		<div class="lotusDialogContent">
+				<div style="padding-bottom:10px;" id="${id}_caption">${nls.helpMsg}</div>
+        		</div><!--end lotusDialogContent-->
+        		<div class="lotusDialogFooter">
+				<input name="CloseButtonName" value="${nls.cancel.label}" class="lotusBtn" type="button" data-dojo-attach-event="onclick: cancelDialog" id="${id}_closeBtn"/>
+        		</div>
+        	</form>
+	</div>
+</div>

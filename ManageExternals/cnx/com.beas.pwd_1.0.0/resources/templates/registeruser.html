@@ -1,0 +1,74 @@
+<div data-dojo-id="${id}" data-dojo-type="dijit/Dialog" class="lotusTabDialog lcSharebox" title="${nls.title.label}">
+	<div class="lotusDialogBorder" style="width: 440px;">
+	<div class="dijitDialogTitleBar lotusDialogHeader" dojoattachpoint="titleBar" title="${nls.title.label}" style="padding-bottom: 15px !important;">
+		<span id="${id}_title" class="dijitDialogTitle" dojoattachpoint="titleNode">${nls.title.label}</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: cancelDialog" title="${nls.close.label}" role="button" tabIndex="-1">
+	            <span data-dojo-attach-point="closeText" class="closeText" title="${nls.close.label}">x</span>
+        	</span>	
+	</div>
+	<form class="lotusDialog lotusForm2" action="javascript:;" method="post" aria-live="assertive" id="${id}_form">
+        <div class="lotusDialogContent">
+        <div style="display:none" id="${id}_messageContainer"></div>
+	<div style="padding-bottom:10px;display:none">${caption}</div>
+        <table cellpadding="0" role="presentation" class="lotusFormTable" style="padding: 0px; font-size: 1em;">
+                <colgroup>
+                        <col>
+                        <col width="100%">
+                </colgroup>
+                <tbody>
+                        <tr class="lotusFormFieldRow">
+                                <td class="lotusFormLabel lotusNowrap">
+                                        <label for="${id}_name1">${nls.name1.label}</label>
+                                </td>
+                                <td>
+                                        <input class="lotusText" type="text" id="${id}_name1" name="name1" aria-required="true" />
+                                </td>
+                        </tr>
+                        <tr class="lotusFormFieldRow">
+                                <td class="lotusFormLabel lotusNowrap">
+                                        <label for="${id}_name2">${nls.name2.label}</label>
+                                </td>
+                                <td>
+                                        <input class="lotusText" type="text" id="${id}_name2" name="name2" aria-required="true" />
+                                </td>
+                        </tr>
+                        <tr class="lotusFormFieldRow">
+                                <td class="lotusFormLabel lotusNowrap">
+                                        <label for="${id}_email1">${nls.email1.label}</label>
+                                </td>
+                                <td>
+                                        <input class="lotusText" type="text" id="${id}_email1" name="email1" aria-required="true" />
+                                </td>
+                        </tr>
+			<tr class="lotusFormFieldRow">
+                                <td class="lotusFormLabel lotusNowrap">
+                                        <label for="${id}_company1">${nls.company1.label}</label>
+                                </td>
+                                <td>
+                                        <input class="lotusText" type="text" id="${id}_company1" name="company1" aria-required="true" />
+                                </td>
+                       	 </tr>
+			 <tr class="lotusFormFieldRow">
+                                <td class="lotusFormLabel lotusNowrap">
+					<label for="${id}_password">${nls.password1.label}</label>
+                                </td>
+                                <td>
+					<label for="${id}_sendemail" style="color:Gray">
+						<input type="radio" name="sendOrShowPwdR" value="sendemail" id="${id}_sendemail" disabled="true"/>${nls.passtext1.label}</label>
+					<input type="radio" name="sendOrShowPwdR" value="showpwd" id="${id}_showpwd" checked="checked"/>${nls.passtext2.label}
+                                </td>
+                        </tr>
+                        <tr class="lotusFormFieldRow" id="${id}_passwordContainer">
+                         </tr>			
+                </tbody>
+        </table>
+
+        </div><!--end lotusDialogContent-->
+        <div class="lotusDialogFooter">
+                <input value="${nls.submit.label}" class="lotusBtn" type="submit" data-dojo-attach-event="onclick: registerUser"/> <input name="CloseButtonName" value="${nls.cancel.label}" class="lotusBtn" type="button" data-dojo-attach-event="onclick: cancelDialog" id="${id}_closeBtn"/>
+        </div>
+        </form>
+
+
+	</div>
+</div>

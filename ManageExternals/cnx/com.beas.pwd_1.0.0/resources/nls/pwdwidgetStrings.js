@@ -1,0 +1,51 @@
+// NLS_CHARSET=UTF-8
+define({
+ root: {
+   submit: {label: "Change Password", a11y: "Change Password", tooltip: "Change Password"},
+   cancel: {label: "Close", a11y: "Close", tooltip: "Close"},
+   close: {label: "Close", a11y: "Close", tooltip: "Close"},
+   title: {label: "Change My Password"},
+   caption: {label: "Change the password of ${0}"},
+   oldpwd: {label: "* Current password:"},
+   newpwd1: {label: "* New password:"},
+   newpwd2: {label: "* Retype password:"},
+   messages: {
+	empty: "Please fill out all required fields.", 
+	nomatch: "Your new passwords do not match.", 
+	success: "Your password was changed successfully.",
+	successdel: "User account was successfully deleted.",
+	unconfigured: "POST URL not defined in config.js. Please contact your administrators.",
+	4: "Remote user is not defined. Please contact your administrators.",
+	10: "Person document verification failed. Please contact your administrators.",
+	11: "Current password is incorrect.",
+	12: "The new passwords do not match.",
+	13: "Not all passwords specified.",
+	14: "Not all required passwords sent.",
+	15: "No matching user found in any address book. Please contact your administrators.",
+	16: "The new password must be at least 8 characters long."
+   },
+   titleEUL: {label: "Manage External Users", width: "1070px"},
+   nameCol: {label: "Name", width: "200px"},
+   emailCol: {label: "Email Address", width: "230px"},
+   companyCol: {label: "Company", width: "230px"},
+   actionCol: {label: "Action", width: "285px"},
+   newUsrBtn: {label: "Register New User", a11y: "Register New User", tooltip: "Register New User"},
+   resetPwdBtn: {label: "Reset PWD", a11y: "Reset PWD", tooltip: "Reset PWD"}, 
+   editUsrBtn: {label: "Edit", a11y: "Edit", tooltip: "Edit"},
+   delUsrBtn: {label: "Inactivate", a11y: "Inactivate", tooltip: "Inactivate"},
+   helpBtn: {label: "Help", a11y: "Help", tooltip: "Help"},
+   deleteTitle: {label: "Inactivate User"},
+   deleteBtn: {label: "Inactivate User", a11y: "Inactivate User", tooltip: "Inactivate User"},
+   deleteMsg: {label: "Inactivate the account of <strong>${0}</strong>?"},
+   helpTitle: {label: "Manage External Users Help", width: "600px" },
+   helpMsg: "<h2>Permissions</h2><p>Only BeaS employees are allowed to manage external users.</p><br><h2>List of External Users</h2><p>The list shows all external users who had been created in the Domino directory. It does not reflect all external Harambee profiles which had already been synchronized. In order to search for a specific user, select to show all users and use your browser search (Ctrl+F) to search for the desired user.</p><br><h2>Register New External User</h2><p>Click the button to register a new user. Please fill out all fields. In case the provided first and last name or the provided email address already exists in the directory, you will get an error message. If everything is okay, you will get a success message and the password for the new external user is displayed. Please make a note so you can provide the password to the new user. In a future version you will be able to select the option to send an email notification containing the password directly to the user. The user will be able to login to Harambee latest after 1.5 hours as the person document has to be synchronized to Harambee first.</p><br><h2>Reset Password</h2><p>Click on the reset password button to request a password reset. The new password for the external user will be displayed. Please make a note so you can provide the new password to the user. In a future version you will be able to select the option to send an email notification containing the password directly to the user.</p><br><h2>Edit External User</h2><p>Click the button to edit the user details stored in the Domino directory, i.e. the user&#39;s first name, last name, email address and company name.</p><br><h2>Inactivate External User</h2><p>Click the button to request the inactivation of the external user profile. The Domino person document will not be deleted, but its type is set to archived. This way, administrators are able to reactivate the user again if needed. Latest after 1.5 hours the Harambee profile will be set to inactive.</p>",
+   resetTitle: {label: "Reset Password"},
+   resetSubmit: {label: "Reset Password", a11y: "Reset Password", tooltip: "Reset Password"},
+   resetOption1: {label: "Send email with password to user"},
+   resetOption2: {label: "Display password on screen only"},
+   resetInfoMsg: "Reset the password for <strong>${0}</strong> to a randomly generated one.",
+   resetNewPwdMsg: "New Password:"
+ },
+ de: true
+});
+

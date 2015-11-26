@@ -1,0 +1,21 @@
+    <proxy:policy url="{DominoServerURL}/PasswordReset.nsf/*" acf="none" basic-auth-support="true">
+        <proxy:actions>
+            <proxy:method>GET</proxy:method>
+            <proxy:method>POST</proxy:method>
+        </proxy:actions>
+        <proxy:headers>
+            <proxy:header>User-Agent</proxy:header>
+            <proxy:header>Accept.*</proxy:header>
+            <proxy:header>Content.*</proxy:header>
+            <proxy:header>Authorization.*</proxy:header>
+            <proxy:header>If-.*</proxy:header>
+            <proxy:header>Pragma</proxy:header>
+            <proxy:header>Cache-Control</proxy:header>
+        </proxy:headers>
+        <proxy:cookies>
+            <proxy:cookie>JSESSIONID</proxy:cookie>
+            <proxy:cookie>LtpaToken</proxy:cookie>
+            <proxy:cookie>LtpaToken2</proxy:cookie>
+        </proxy:cookies>
+    </proxy:policy>
+

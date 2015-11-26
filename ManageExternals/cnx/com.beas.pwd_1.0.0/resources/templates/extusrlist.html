@@ -1,0 +1,33 @@
+<div data-dojo-id="${id}" data-dojo-type="dijit/Dialog" class="lotusTabDialog lcSharebox" title="${nls.titleEUL.label}">
+	<div class="lotusDialogBorder" style="width: ${nls.titleEUL.width};">
+		<div class="dijitDialogTitleBar lotusDialogHeader" dojoattachpoint="titleBar" title="${nls.titleEUL.label}" style="padding-bottom: 15px !important;">
+			<span id="${id}_title" class="dijitDialogTitle" dojoattachpoint="titleNode">${nls.titleEUL.label}</span>
+			<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: cancelDialog" title="${nls.close.label}" role="button" tabIndex="-1">
+		            <span data-dojo-attach-point="closeText" class="closeText" title="${nls.close.label}">x</span>
+        		</span>	
+		</div>
+		<div class="lotusDialog">
+	        	<div class="lotusDialogContent">
+	        		<div style="display:none" id="${id}_messageContainer"></div>
+				<div class="lotusBtnContainer" style="padding-bottom: 5px; margin-top: -10px">
+					<table width="100%">
+						<tbody>
+							<tr>
+								<td align="left">
+				        		        	<input name="NewUserButtonName" value="${nls.newUsrBtn.label}" class="lotusBtn" type="button" data-dojo-attach-event="onclick: createUSR"/>
+								</td>
+								<td align="right">
+				        		        	<input name="HelpButtonName" value="${nls.helpBtn.label}" class="lotusBtn" type="button" data-dojo-attach-event="onclick: showHelp"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="${id}_gridContainer" style="height:23em;"></div>
+	        	</div><!--end lotusDialogContent-->
+		        <div class="lotusDialogFooter">
+        		        <input name="CloseButtonName" value="${nls.cancel.label}" class="lotusBtn" type="button" data-dojo-attach-event="onclick: cancelDialog" id="${id}_closeBtn"/>
+		        </div>
+		</div>
+	</div>
+</div>

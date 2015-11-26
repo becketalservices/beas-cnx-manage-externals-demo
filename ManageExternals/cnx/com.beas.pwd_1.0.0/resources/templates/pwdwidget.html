@@ -1,0 +1,66 @@
+<div data-dojo-id="${id}" data-dojo-type="dijit/Dialog" class="lotusTabDialog lcSharebox" title="${nls.title.label}">
+	<div class="lotusDialogBorder" style="width: 440px;">
+	<div class="dijitDialogTitleBar lotusDialogHeader" dojoattachpoint="titleBar" title="${nls.title.label}" style="padding-bottom: 15px !important;">
+		<span id="${id}_title" class="dijitDialogTitle" dojoattachpoint="titleNode">${nls.title.label}</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: cancelDialog" title="${nls.close.label}" role="button" tabIndex="-1">
+	            <span data-dojo-attach-point="closeText" class="closeText" title="${nls.close.label}">x</span>
+        	</span>	
+	</div>
+	<form class="lotusDialog lotusForm2" action="javascript:;" method="post" aria-live="assertive" id="${id}_form">
+        <div class="lotusDialogContent">
+        <div style="display:none" id="${id}_messageContainer"></div>
+	<div style="padding-bottom:10px;">${caption}</div>
+        <table cellpadding="0" role="presentation" class="lotusFormTable" style="padding: 0px; font-size: 1em;">
+                <colgroup>
+                        <col>
+                        <col width="100%">
+                        <col>
+                </colgroup>
+                <tbody>
+                        <tr>
+                                <td colspan="3" style="padding: 0px;">
+                                        <div aria-live="assertive" style="display: none;" id="${id}_MessageContainer"/>
+                                </td>
+                        </tr>
+                        <tr class="lotusFormFieldRow">
+                                <td class="lotusFormLabel lotusNowrap">
+                                        <label for="${id}_oldpwd">${nls.oldpwd.label}</label>
+                                </td>
+                                <td>
+                                        <input class="lotusText" type="password" id="${id}_oldpwd" name="oldpwd" aria-required="true" />
+                                        <div style="display: none;"/>
+                                </td>
+                                <td/>
+                        </tr>
+                        <tr class="lotusFormFieldRow">
+                                <td class="lotusFormLabel lotusNowrap">
+                                        <label for="${id}_newpwd1">${nls.newpwd1.label}</label>
+                                </td>
+                                <td>
+                                        <input class="lotusText" type="password" id="${id}_newpwd1" name="newpwd1" aria-required="true" />
+                                        <div style="display: none;"/>
+                                </td>
+                                <td/>
+                        </tr>
+                        <tr class="lotusFormFieldRow">
+                                <td class="lotusFormLabel lotusNowrap">
+                                        <label for="${id}_newpwd2">${nls.newpwd2.label}</label>
+                                </td>
+                                <td>
+                                        <input class="lotusText" type="password" id="${id}_newpwd2" name="newpwd2" aria-required="true" />
+                                        <div style="display: none;"/>
+                                </td>
+                                <td/>
+                        </tr>
+                </tbody>
+        </table>
+
+        </div><!--end lotusDialogContent-->
+        <div class="lotusDialogFooter">
+                <input value="${nls.submit.label}" class="lotusBtn" type="submit" data-dojo-attach-event="onclick: changePassword"/> <input name="CloseButtonName" value="${nls.cancel.label}" class="lotusBtn" type="button" data-dojo-attach-event="onclick: cancelDialog" id="${id}_closeBtn"/>
+        </div>
+        </form>
+
+
+	</div>
+</div>
